@@ -86,11 +86,12 @@ span{
     border: .6rem solid blue;
     font-size: 4rem;
     margin: 3rem 1.5rem 3rem 0;
-    transition: .3s ease;
+    transition: .5s ease;
     width: 10rem;
 }
 
-.redes, i:hover{
+i:hover{
+    transform: scale(1.1);
     color: white;
 }
 
@@ -174,7 +175,7 @@ span{
 .servicos h2{
     transition: 3s ease;
     font-size: 4rem;
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
 
 .servicos-container{
@@ -188,13 +189,13 @@ span{
 .servicos-container .servicos-caixa{
     box-shadow: 0 0 1rem white;
     flex: 1 1 30rem;
-    padding: 3rem 2rem 4rem;
+    padding: 1rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid;
     transition: .5s ease;
-    /* max-height: 45rem;
-    min-height: 45rem; */
+    max-height: 55rem;
+    min-height: 55rem;
 }
 
 .servicos-container .servicos-caixa:hover{
@@ -203,7 +204,7 @@ span{
 }
 
 .servicos-caixa i{
-    font-size: 7rem;
+    font-size: 5rem;
     color: #1E90FF;
 }
 
