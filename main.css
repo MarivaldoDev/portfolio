@@ -95,6 +95,33 @@ i:hover{
     color: white;
 }
 
+.curriculo a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.download{
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background: #00BFFF;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #0000CD;
+    font-size: 1.6rem;
+    color: black;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .9s ease;
+}
+
+.download:hover{
+    background: lightblue;
+    box-shadow: none;
+    transform: scale(1.1);
+}
+
+
 .home2{
     min-height: 30vw;
     max-height: 150vw;
