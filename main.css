@@ -386,19 +386,33 @@ i:hover{
 
     .home2{
         padding: 5rem;
-        padding-bottom: 10rem;
+        padding-bottom: 100rem;
     }
 
-    .slide{
-        width: 300px;
-        height: 300px;
+    .carousel {
+        margin-left: 0;
+        margin-top: 50%;
+        width: 100%;
+        max-width: 450px; /* Limita o carrossel a 450px de largura */
     }
 
-    .slide .logo{
-        height: 250px;
+    .python{
+        width: 40rem;
+        height: 40rem;
+        margin-bottom: 10%;
+    }
+
+    .controls #prev {
+        left: 10px; /* Ajusta as setas para ficarem mais próximas das bordas da tela */
+    }
+
+    .controls #next {
+        right: 10px; /* Ajusta as setas para ficarem mais próximas das bordas da tela */
+    }
+
+    .controls button {
+        padding: 8px; /* Reduz o tamanho dos botões para melhor adaptação em telas menores */
+        font-size: 16px; /* Reduz o tamanho da fonte dos botões */
     }
     
-    .passar{
-        margin-left: 8rem;
-    }
 }
