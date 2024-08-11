@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
+    <script src="exemplo.js" defer></script>
     <title>Marivaldo Pedro</title>
 </head>
 <body>
@@ -36,16 +37,20 @@
         </div>
     </section>
     <section class="home2"> 
-          <h2 class="heading">Especialidades</h2>
-          <div class="slide">
-            <img src="imagens/python.png" alt="" class="logo" style="height: 300px;">
-            <img src="imagens/django.png" alt="" class="logo" style="width: 300px; height: 300px;">
-            <img src="imagens/mysql.png" alt="" class="logo" style="width: 300px; height: 300px;">
-            <img src="imagens/html.png" alt="" class="logo" style="width: 300px; height: 300px;">
-            <img src="imagens/css.png" alt="" class="logo" style="width: 300px; height: 300px;">
-          </div>
-          
-        <span class="passar"></span>      
+        <h2 class="heading">Especialidades</h2>
+        <div class="carousel">
+            <div class="slides">
+                <img src="imagens/python.png" class="python" alt="Image 1">
+                <img src="imagens/django.png" alt="Image 2">
+                <img src="imagens/mysql3-removebg-preview.png" class="mysql" alt="Image 3">
+                <img src="imagens/html.png" alt="Image 4">
+                <img src="imagens/css.png" alt="Image 5">
+            </div>
+            <div class="controls">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+        </div>  
     </section>
   <section class="servicos" id="servicos">
     <h2 class="heading">Meus  <span>Projetos</span></h2>

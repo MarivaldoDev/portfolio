@@ -131,54 +131,76 @@ i:hover{
     background-color: #263751;
 }
 
-.slide{
-    width: 300px;
-    height: 350px;
-    margin: 0 auto;
+.carousel {
+    margin-left: 30%;
+    width: 80%;
+    max-width: 600px;
     position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
     display: flex;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    animation: scrollAnimation 2s infinite linear;
+    transition: transform 0.5s ease-in-out;
 }
 
-.slide .logo{
-    display: block;
-    width: 300px;
-    height: 300px;
-    /* position: sticky; */
-    left: 0;
+.python{
+    height: 50rem;
+    width: 60rem;
+    margin-top: 10%;
+}
+
+.mysql{
+    width: 50px;
+}
+
+.slides img {
+    width: 100%;
     flex-shrink: 0;
-    object-fit: cover;
-    scroll-snap-align: center;
 }
 
-@keyframes slideAnimation {
-    0% {
-        scroll-behavior: smooth;
-        scroll-left: 0;
-    }
-    100% {
-        scroll-behavior: smooth;
-        scroll-left: 100%;
-    }
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Para permitir que o clique passe pela área vazia da control */
 }
 
-.passar{
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.6rem;
-    margin-bottom: 20rem;
-    color: #00BFFF;
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    pointer-events: auto; /* Para habilitar cliques apenas nos botões */
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.controls #prev {
+    position: fixed;
+    left: 20px; /* Define a posição fixa no canto esquerdo da tela */
+}
+
+.controls #next {
+    position: fixed;
+    right: 20px; /* Define a posição fixa no canto direito da tela */
 }
 
 .heading{
     color: white;
     font-size: 4.5rem;
 }
-
 
 .btn{
     display: inline-block;
