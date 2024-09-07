@@ -140,6 +140,7 @@ i:hover{
     border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 6s ease;
 }
 
 .slides {
@@ -147,13 +148,17 @@ i:hover{
     transition: transform 0.5s ease-in-out;
 }
 
-.python{
+.python-img{
     height: 50rem;
-    width: 60rem;
+    width: 80rem;
     margin-top: 10%;
 }
 
-.mysql{
+.django-img{
+    width: 80rem;
+}
+
+.mysql-img{
     width: 50px;
 }
 
@@ -170,6 +175,10 @@ i:hover{
     justify-content: space-between;
     transform: translateY(-50%);
     pointer-events: none; /* Para permitir que o clique passe pela área vazia da control */
+}
+
+.carousel:hover{
+    transform: scale(1.1);
 }
 
 .controls button {
