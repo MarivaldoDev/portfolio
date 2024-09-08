@@ -406,9 +406,7 @@ i:hover{
     }
 
     .python{
-        width: 150rem;
-        /* height: 50rem; */
-        margin-bottom: 10%;
+        height: 400px;
     }
 
     .controls #prev {
