@@ -133,14 +133,20 @@ i:hover{
 
 .carousel {
     margin-left: 30%;
+    margin-top: 2rem;
     width: 80%;
     max-width: 600px;
     position: relative;
     overflow: hidden;
-    border: 2px solid #ccc;
+    border: 5px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: 6s ease;
+    transition: 0.5s ease;
+}
+
+.carousel:hover {
+    border-color: #00BFFF;
+    transform: scale(1.02);
 }
 
 .slides {
@@ -177,9 +183,6 @@ i:hover{
     pointer-events: none; /* Para permitir que o clique passe pela área vazia da control */
 }
 
-.carousel:hover{
-    transform: scale(1.1);
-}
 
 .controls button {
     background-color: rgba(0, 0, 0, 0.5);
@@ -222,6 +225,8 @@ i:hover{
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .3s ease;
+    width: 20rem;
+    text-align: center;
 }
 
 .btn:hover{
@@ -229,14 +234,13 @@ i:hover{
     box-shadow: none;
 }
 
-
-.servicos h2{
+.servicos h2 {
     transition: 3s ease;
     font-size: 4rem;
     margin-bottom: 7rem;
 }
 
-.servicos-container{
+.servicos-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,46 +248,54 @@ i:hover{
     gap: 2rem;
 }
 
-.servicos-container .servicos-caixa{
+.servicos-container .servicos-caixa {
     box-shadow: 0 0 1rem white;
     flex: 1 1 30rem;
     padding: 1rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid;
-    transition: .5s ease;
-    /* max-height: 55rem;
-    min-height: 55rem; */
+    border: 0.2rem solid;
+    transition: 0.5s ease;
+    height: 55rem; /* Define uma altura fixa */
+    overflow: hidden; /* Oculta o excesso de texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantém o layout interno uniforme */
 }
 
-.servicos-container .servicos-caixa:hover{
+.servicos-container .servicos-caixa:hover {
     border-color: #00BFFF;
     transform: scale(1.02);
 }
 
-.servicos-caixa i{
+.servicos-caixa i {
     font-size: 5rem;
     color: #1E90FF;
 }
 
-.servicos-caixa video{
+.servicos-caixa video {
+    margin-left: 5rem;
     border-radius: 2rem;
 }
 
-.servicos-caixa h3{
+.servicos-caixa h3 {
     color: white;
     font-size: 2.8rem;
+    margin-top: 2rem;
 }
 
-.servicos-caixa a{
+.servicos-caixa a {
+    margin-left: 10rem;
     font-size: 2rem;
 }
 
-.servicos-caixa p{
+.servicos-caixa p {
     color: white;
     font-size: 1.8rem;
     margin: 1rem 0 3rem;
+    flex-shrink: 1; /* Permite que o parágrafo se ajuste */
 }
+
 
 .footer{
     display: flex;
