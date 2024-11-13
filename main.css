@@ -418,7 +418,8 @@ i:hover{
     }
 
     .python{
-        height: 400px;
+        width: 500px;
+        height: 500px;
     }
 
     .controls #prev {
@@ -432,6 +433,16 @@ i:hover{
     .controls button {
         padding: 8px; /* Reduz o tamanho dos botões para melhor adaptação em telas menores */
         font-size: 16px; /* Reduz o tamanho da fonte dos botões */
+    }
+
+    .servicos-caixa video{
+        width: 30rem;
+        margin-left: 2rem;
+    }
+
+    .servicos-caixa a {
+        margin-left: 7rem;
+        font-size: 2rem;
     }
     
 }
