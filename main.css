@@ -291,7 +291,7 @@ i:hover{
 
 .servicos-caixa p {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin: 1rem 0 3rem;
     flex-shrink: 1; /* Permite que o parágrafo se ajuste */
 }
