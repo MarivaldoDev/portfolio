@@ -18,6 +18,45 @@ html{
     overflow-x: hidden;
 }
 
+.logo{
+    font-size: 2.5rem;
+    color: #17263d;
+    font-weight: 600;
+    cursor: default;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 9%;
+    background: #17263d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: lightblue;
+    margin-left: 4rem;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.activate{
+    color: blue;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: lightblue;
+    display: none;
+}
+
 section{
     min-height: 50vw;
     padding: 2rem 6%;
@@ -155,8 +194,8 @@ i:hover{
 }
 
 .python-img{
-    height: 60rem;
-    width: 30rem;
+    height: 50rem;
+    width: 20rem;
     margin-top: 10%;
 }
 
@@ -251,10 +290,10 @@ i:hover{
 .servicos-container .servicos-caixa {
     box-shadow: 0 0 1rem white;
     flex: 1 1 30rem;
-    padding: 1rem 2rem 4rem;
+    padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: 0.2rem solid;
+    border: .2rem solid;
     transition: 0.5s ease;
     height: 55rem; /* Define uma altura fixa */
     overflow: hidden; /* Oculta o excesso de texto */
@@ -274,24 +313,24 @@ i:hover{
 }
 
 .servicos-caixa video {
-    margin-left: 5rem;
+    margin-left: 10rem;
     border-radius: 2rem;
 }
 
 .servicos-caixa h3 {
     color: white;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-top: 2rem;
 }
 
 .servicos-caixa a {
-    margin-left: 10rem;
+    margin-left: 15rem;
     font-size: 2rem;
 }
 
 .servicos-caixa p {
     color: white;
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     margin: 1rem 0 3rem;
     flex-shrink: 1; /* Permite que o parágrafo se ajuste */
 }
