@@ -155,8 +155,8 @@ i:hover{
 }
 
 .python-img{
-    height: 50rem;
-    width: 80rem;
+    height: 60rem;
+    width: 30rem;
     margin-top: 10%;
 }
 
@@ -421,10 +421,10 @@ i:hover{
         max-width: 450px; /* Limita o carrossel a 450px de largura */
     }
 
-    .python{
+    /* .python{
         width: 500px;
         height: 500px;
-    }
+    } */
 
     .controls #prev {
         left: 10px; /* Ajusta as setas para ficarem mais próximas das bordas da tela */
@@ -442,6 +442,10 @@ i:hover{
     .servicos-caixa video{
         width: 30rem;
         margin-left: 2rem;
+    }
+
+    .servicos-caixa p {
+        font-size: 1.5rem;
     }
 
     .servicos-caixa a {
