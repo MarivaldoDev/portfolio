@@ -28,4 +28,19 @@ window.onscroll = () => {
     let header = document.querySelector('header');
 
     header.classList.toggle('sticky', window.scrollY > 100);
+
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
+
+ScrollReveal({
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home, .home2', {origin: 'top'});
+ScrollReveal().reveal('.img-main, .servicos-container', {origin: 'bottom'});
+ScrollReveal().reveal('.conteudo h1, .heading', {origin: 'left'});
+ScrollReveal().reveal('.conteudo p', {origin: 'right'});
