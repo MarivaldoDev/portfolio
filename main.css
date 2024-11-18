@@ -176,7 +176,7 @@ i:hover{
 
 .carousel {
     margin-left: 30%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 80%;
     max-width: 600px;
     position: relative;
@@ -198,9 +198,9 @@ i:hover{
 }
 
 .python-img{
-    height: 50rem;
+    height: 60rem;
     width: 20rem;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .django-img{
@@ -403,23 +403,19 @@ i:hover{
     }
 
     .navbar{
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 100%;
         left: 0;
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 0;
-        padding: 1rem 3%;
+        width: 100%;
+        padding: 1rem 4%;
         background: #17263d;
         border-top: .1rem solid #17263d;
         box-shadow: 0 .5rem 1rem #17263d;
+        z-index: 100;
         display: none;
     }
 
-    .navbar .active{
+    .navbar.active{
         display: block;
     }
 
