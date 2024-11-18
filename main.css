@@ -30,12 +30,16 @@ html{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 9%;
+    padding: 2rem 9%;
     background: #17263d;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid #17263d;
 }
 
 .navbar a{
@@ -48,7 +52,7 @@ html{
 
 .navbar a:hover,
 .navbar a.activate{
-    color: blue;
+    color: white;
 }
 
 #menu-icon{
@@ -307,13 +311,9 @@ i:hover{
     transform: scale(1.02);
 }
 
-.servicos-caixa i {
-    font-size: 5rem;
-    color: #1E90FF;
-}
 
 .servicos-caixa video {
-    margin-left: 10rem;
+    margin-left: 7rem;
     border-radius: 2rem;
 }
 
@@ -324,7 +324,7 @@ i:hover{
 }
 
 .servicos-caixa a {
-    margin-left: 15rem;
+    margin-left: 12rem;
     font-size: 2rem;
 }
 
@@ -376,9 +376,14 @@ i:hover{
 }
 
 @media (max-width: 991px){
-    section{
-        padding: 0.5rem 6%;
+    .header{
+        padding: 2rem 3%;
     }
+    
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    
     .servicos{
         padding: 5rem;
     }
@@ -393,6 +398,37 @@ i:hover{
 }
 
 @media (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        padding: 1rem 3%;
+        background: #17263d;
+        border-top: .1rem solid #17263d;
+        box-shadow: 0 .5rem 1rem #17263d;
+        display: none;
+    }
+
+    .navbar .active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
     .home{
         flex-direction: column;
     }
@@ -450,12 +486,12 @@ i:hover{
 
     .home2{
         padding: 5rem;
-        padding-bottom: 100rem;
+        padding-bottom: 80rem;
     }
 
     .carousel {
         margin-left: 0;
-        margin-top: 50%;
+        margin-top: 20%;
         width: 100%;
         max-width: 450px; /* Limita o carrossel a 450px de largura */
     }
