@@ -450,8 +450,9 @@ i:hover{
         height: 50vw;
     }
 
-    h2 + .carousel {
-        margin-top: 1.5rem; /* Reduz o espaço em telas menores */
+    .heading {
+        font-size: 3.5rem; /* Reduz o tamanho da fonte */
+        margin-bottom: 1.5rem; /* Diminui o espaçamento inferior */
     }
 
     .carousel {
@@ -558,8 +559,9 @@ i:hover{
         padding-bottom: 70rem;
     }
 
-    h2 + .carousel {
-        margin-top: 1rem; /* Ajuste ainda mais compacto */
+    .heading {
+        font-size: 2.8rem; /* Fonte menor para telas compactas */
+        margin-bottom: 1rem; /* Ajusta o espaçamento inferior */
     }
 
     .carousel {
@@ -628,6 +630,12 @@ i:hover{
         padding-bottom: 50rem;
     }
 
+    .heading {
+        font-size: 2.4rem; /* Reduz ainda mais para dispositivos muito pequenos */
+        margin-bottom: 0.8rem; /* Espaço inferior reduzido */
+        padding: 0 1rem; /* Adiciona padding lateral para evitar corte do texto */
+    }
+
     .carousel {
         width: 90%; /* Ocupa quase toda a largura da tela */
         margin: 0 auto; /* Centraliza o carrossel */
@@ -679,7 +687,7 @@ i:hover{
     }
 
     .servicos-caixa a {
-        font-size: 1.2rem; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 1.4rem; /* Reduz ainda mais o tamanho da fonte */
         padding: 0.6rem 1.2rem; /* Padding mais compacto */
         border-radius: 1rem; /* Bordas mais discretas */
         width: 80%; /* Ocupa toda a largura disponível */
