@@ -55,6 +55,18 @@ html{
     color: white;
 }
 
+.translate-btn {
+    padding: 0.5rem 1rem;
+    background: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    transition: background-color 0.3s ease;
+}
+
 #menu-icon{
     font-size: 3.6rem;
     color: lightblue;
@@ -425,6 +437,11 @@ i:hover{
         margin: 3rem 0;
     }
 
+    .translate-btn {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+
     .home{
         flex-direction: column;
     }
@@ -560,7 +577,7 @@ i:hover{
     }
 
     .heading {
-        font-size: 2.8rem; /* Fonte menor para telas compactas */
+        font-size: 3rem; /* Fonte menor para telas compactas */
         margin-bottom: 1rem; /* Ajusta o espaçamento inferior */
     }
 
@@ -631,7 +648,7 @@ i:hover{
     }
 
     .heading {
-        font-size: 2.4rem; /* Reduz ainda mais para dispositivos muito pequenos */
+        font-size: 3rem; /* Reduz ainda mais para dispositivos muito pequenos */
         margin-bottom: 0.8rem; /* Espaço inferior reduzido */
         padding: 0 1rem; /* Adiciona padding lateral para evitar corte do texto */
     }
