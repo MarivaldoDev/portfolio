@@ -450,8 +450,8 @@ i:hover{
         height: 50vw;
     }
 
-    .servicos h2{
-        margin-bottom: 3rem;
+    h2 + .carousel {
+        margin-top: 1.5rem; /* Reduz o espaço em telas menores */
     }
 
     .carousel {
@@ -482,13 +482,49 @@ i:hover{
     }
 
     .servicos-caixa p {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         margin: 0.5rem 0 2rem;
     }
 
     .servicos-caixa video {
         width: 100%; /* Video responsivo */
         margin-left: 0;
+    }
+
+    .servicos-caixa a {
+        display: inline-block; /* Garante exibição como botão */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        padding: 1rem 2rem; /* Adiciona espaço interno */
+        font-size: 1.6rem; /* Ajusta o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+        border-radius: 5rem; /* Bordas arredondadas */
+        background-color: #00BFFF; /* Destaque para o link */
+        color: black; /* Cor do texto */
+        transition: 0.3s ease; /* Adiciona efeito de hover */
+    }
+
+    .servicos-caixa a:hover {
+        background-color: lightblue; /* Cor de destaque no hover */
+        color: black; /* Cor do texto no hover */
+        transform: scale(1.05); /* Leve zoom no hover */
+    }
+
+    .footer {
+        padding: 2rem 5%; /* Reduz o padding em dispositivos menores */
+        flex-direction: column; /* Reorganiza os elementos verticalmente */
+        text-align: center;
+    }
+
+    .footer-texto {
+        font-size: 1.8rem; /* Reduz tamanho da fonte */
+    }
+
+    .footer-icone {
+        margin: 0.8rem; /* Aumenta espaço entre ícones */
+    }
+
+    .footer-icone a i {
+        font-size: 2rem; /* Ajusta tamanho do ícone */
     }
 
 }
@@ -520,6 +556,10 @@ i:hover{
     .home2{
         padding: 5rem 2%;
         padding-bottom: 70rem;
+    }
+
+    h2 + .carousel {
+        margin-top: 1rem; /* Ajuste ainda mais compacto */
     }
 
     .carousel {
@@ -558,12 +598,111 @@ i:hover{
     }
 
     .servicos-caixa a {
-        margin-left: 8rem;
-        font-size: 2rem;
+        font-size: 1.4rem; /* Fonte menor para telas compactas */
+        padding: 0.8rem 1.6rem; /* Ajusta o padding */
+        border-radius: 2rem; /* Bordas mais sutis */
+        margin-top: 1rem; /* Espaço extra entre elementos */
+        width: 80%; /* Ocupa 90% da largura do container */
     }
 
-    .footer{
-        padding: 2rem;
+    .footer {
+        padding: 1.5rem 3%; /* Ajuste mais compacto para telas pequenas */
     }
-    
+
+    .footer-texto {
+        font-size: 1.6rem; /* Fonte menor */
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-icone {
+        padding: 0.6rem 0.8rem; /* Padding mais compacto */
+    }
+
+    .footer-icone a i {
+        font-size: 1.8rem; /* Ícones ainda menores */
+    }
+}
+
+@media (max-width: 375px) {
+    .home2{
+        padding-bottom: 50rem;
+    }
+
+    .carousel {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        margin: 0 auto; /* Centraliza o carrossel */
+        padding: 0.5rem; /* Reduz o espaçamento interno */
+        border: 1px solid #ccc; /* Reduz ainda mais a espessura da borda */
+        border-radius: 5px; /* Ajusta o arredondamento para um visual mais leve */
+        box-shadow: none; /* Remove sombras para simplificar */
+    }
+
+    .carousel .slides img {
+        width: 100%; /* Imagens completamente responsivas */
+        height: auto; /* Mantém proporções corretas */
+        border-radius: 4px; /* Suaviza as bordas das imagens */
+    }
+
+    .carousel .controls button {
+        padding: 4px; /* Reduz ainda mais o tamanho dos botões */
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+        width: 25px; /* Define largura fixa para os botões */
+        height: 25px; /* Define altura fixa para os botões */
+        border-radius: 50%; /* Botões arredondados */
+        background-color: rgba(0, 0, 0, 0.4); /* Botões com maior transparência */
+    }
+
+    .controls #prev {
+        left: 2px; /* Posiciona as setas mais próximas das bordas */
+    }
+
+    .controls #next {
+        right: 10px;
+    }
+
+    .carousel:hover {
+        transform: none; /* Remove o efeito de zoom em telas muito pequenas */
+    }
+
+    .servicos-caixa {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        border-width: 0.05rem;
+    }
+
+    .servicos-caixa h3 {
+        font-size: 1.6rem;
+    }
+
+    .servicos-caixa p {
+        font-size: 1.2rem;
+    }
+
+    .servicos-caixa a {
+        font-size: 1.2rem; /* Reduz ainda mais o tamanho da fonte */
+        padding: 0.6rem 1.2rem; /* Padding mais compacto */
+        border-radius: 1rem; /* Bordas mais discretas */
+        width: 80%; /* Ocupa toda a largura disponível */
+    }
+
+    .servicos-caixa video {
+        width: 100%; /* Ocupa quase toda a largura */
+    }
+
+    .footer {
+        padding: 1rem; /* Reduz padding ao máximo */
+        gap: 1rem; /* Espaçamento consistente entre elementos */
+    }
+
+    .footer-texto {
+        font-size: 1.4rem; /* Texto menor para telas muito pequenas */
+    }
+
+    .footer-icone {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .footer-icone a i {
+        font-size: 1.6rem;
+    }
 }
