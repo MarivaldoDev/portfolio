@@ -18,6 +18,66 @@ html{
     overflow-x: hidden;
 }
 
+.tecnologias {
+    min-height: 30vw;
+    padding: 2rem;
+    background-color: #263751;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    color: white;
+}
+
+/* Carrossel com rolagem horizontal */
+.carousel {
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os cards */
+    overflow-x: auto; /* Habilita rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Ativa snapping para rolagem suave */
+    padding: 1rem;
+    scrollbar-width: thin; /* Personaliza largura da barra de rolagem no Firefox */
+    justify-content: center; /* Centraliza o carrossel horizontalmente */
+    margin-top: 4rem; /* Move o carrossel para baixo */
+    flex-wrap: nowrap;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #00BFFF;
+    border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+/* Estilo dos cards */
+.servicos-caixa {
+    flex: 0 0 auto; /* Largura fixa para telas maiores */
+    width: calc(25% - 1.5rem);
+    scroll-snap-align: start; /* Alinha o card no início */
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicos-caixa img {
+    width: 100px; /* Ajuste do tamanho das imagens */
+    height: 100px;
+}
+
+
 .logo{
     font-size: 2.5rem;
     color: #17263d;
@@ -186,88 +246,6 @@ i:hover{
     background-color: #263751;
 }
 
-.carousel {
-    margin-left: 30%;
-    margin-top: 1rem;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    overflow: hidden;
-    border: 5px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: 0.5s ease;
-}
-
-.carousel:hover {
-    border-color: #00BFFF;
-    transform: scale(1.02);
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.python-img{
-    height: 60rem;
-    width: 20rem;
-    margin-top: 5%;
-}
-
-.django-img{
-    width: 80rem;
-}
-
-.mysql-img{
-    width: 50px;
-}
-
-.slides img {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none; /* Para permitir que o clique passe pela área vazia da control */
-}
-
-
-.controls button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-    pointer-events: auto; /* Para habilitar cliques apenas nos botões */
-}
-
-.controls button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.controls #prev {
-    position: fixed;
-    left: 20px; /* Define a posição fixa no canto esquerdo da tela */
-}
-
-.controls #next {
-    position: fixed;
-    right: 20px; /* Define a posição fixa no canto direito da tela */
-}
-
-.heading{
-    color: white;
-    font-size: 4.5rem;
-}
 
 .btn{
     display: inline-block;
@@ -303,7 +281,7 @@ i:hover{
     gap: 2rem;
 }
 
-.servicos-container .servicos-caixa {
+.servicos-container .caixa {
     box-shadow: 0 0 1rem white;
     flex: 1 1 30rem;
     padding: 3rem 2rem 4rem;
@@ -311,42 +289,41 @@ i:hover{
     text-align: center;
     border: .2rem solid;
     transition: 0.5s ease;
-    height: 55rem; /* Define uma altura fixa */
-    overflow: hidden; /* Oculta o excesso de texto */
+    height: 55rem; 
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Mantém o layout interno uniforme */
+    justify-content: space-between; 
 }
 
-.servicos-container .servicos-caixa:hover {
+.servicos-container .caixa:hover {
     border-color: #00BFFF;
     transform: scale(1.02);
 }
 
 
-.servicos-caixa video {
+.caixa video {
     margin-left: 7rem;
     border-radius: 2rem;
 }
 
-.servicos-caixa h3 {
+.caixa h3 {
     color: white;
     font-size: 2.5rem;
     margin-top: 2rem;
 }
 
-.servicos-caixa a {
+.caixa a {
     margin-left: 12rem;
     font-size: 2rem;
 }
 
-.servicos-caixa p {
+.caixa p {
     color: white;
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
-    flex-shrink: 1; /* Permite que o parágrafo se ajuste */
+    flex-shrink: 1; 
 }
-
 
 .footer{
     display: flex;
@@ -469,47 +446,36 @@ i:hover{
 
     .heading {
         font-size: 3.5rem; /* Reduz o tamanho da fonte */
-        margin-bottom: 1.5rem; /* Diminui o espaçamento inferior */
+        margin-bottom: 10rem; /* Diminui o espaçamento inferior */
     }
 
-    .carousel {
-        margin: 0 auto; /* Centraliza o carrossel */
-        width: 80%; /* Ajusta a largura para ocupar 90% da tela */
-        max-width: none; /* Remove o limite superior */
-        border-width: 3px; /* Reduz a largura da borda */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Suaviza o efeito de sombra */
-    }
-
-    .carousel:hover {
-        transform: none; /* Remove o efeito de zoom para telas menores */
-    }
-
-    .slides img {
-        border-radius: 10px; /* Adiciona um leve arredondamento para imagens */
-    }
-
+   
     .servicos-caixa {
+        width: calc(50% - 1.5rem); /* 2 cards por linha */
+    }
+
+    .caixa {
         flex: 1 1 100%; /* Ajusta a largura para ocupar 100% */
         padding: 2rem 1.5rem;
         height: auto; /* Permite altura flexível */
         border-radius: 1.5rem;
     }
 
-    .servicos-caixa h3 {
+    .caixa h3 {
         font-size: 2rem;
     }
 
-    .servicos-caixa p {
+    .caixa p {
         font-size: 1.5rem;
         margin: 0.5rem 0 2rem;
     }
 
-    .servicos-caixa video {
+    .caixa video {
         width: 100%; /* Video responsivo */
         margin-left: 0;
     }
 
-    .servicos-caixa a {
+    .caixa a {
         display: inline-block; /* Garante exibição como botão */
         margin: 0 auto; /* Centraliza horizontalmente */
         padding: 1rem 2rem; /* Adiciona espaço interno */
@@ -521,7 +487,7 @@ i:hover{
         transition: 0.3s ease; /* Adiciona efeito de hover */
     }
 
-    .servicos-caixa a:hover {
+    .caixa a:hover {
         background-color: lightblue; /* Cor de destaque no hover */
         color: black; /* Cor do texto no hover */
         transform: scale(1.05); /* Leve zoom no hover */
@@ -571,52 +537,30 @@ i:hover{
     }
 
 
-    .home2{
-        padding: 5rem 2%;
-        padding-bottom: 70rem;
-    }
-
     .heading {
         font-size: 3rem; /* Fonte menor para telas compactas */
         margin-bottom: 1rem; /* Ajusta o espaçamento inferior */
     }
 
-    .carousel {
-        width: 100%; /* Ocupa toda a largura da tela */
-        padding: 1rem; /* Adiciona espaço ao redor do conteúdo */
-        border: 2px solid #ccc; /* Reduz ainda mais a espessura da borda */
-        border-radius: 8px; /* Ajusta o arredondamento */
+    .servicos-caixa {
+        width: calc(100% - 1.5rem); /* 1 card por linha */
     }
 
-    .carousel .controls button {
-        padding: 6px; /* Reduz o tamanho dos botões */
-        font-size: 14px; /* Diminui a fonte dos botões */
-        border-radius: 50%; /* Mantém o formato circular */
+    .heading {
+        font-size: 1.8rem; /* Reduz ainda mais o título */
+        margin-bottom: 1rem;
     }
 
-    .controls #prev {
-        left: 5px; /* Posiciona as setas mais próximas do conteúdo */
-    }
-
-    .controls #next {
-        right: 15px;
-    }
-
-    .slides img {
-        width: 100%; /* Garante que as imagens sejam responsivas */
-        height: auto; /* Ajusta a altura automaticamente */
-    }
-
-    .servicos-caixa video{
+    .caixa video{
         width: 100%;
        
     }
 
-    .servicos-caixa p {
+    .caixa p {
         font-size: 1.5rem;
     }
 
-    .servicos-caixa a {
+    .caixa a {
         font-size: 1.4rem; /* Fonte menor para telas compactas */
         padding: 0.8rem 1.6rem; /* Ajusta o padding */
         border-radius: 2rem; /* Bordas mais sutis */

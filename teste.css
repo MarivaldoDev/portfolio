@@ -1,0 +1,106 @@
+/* Estilo geral para a seção */
+.tecnologias {
+    padding: 10rem;
+    background-color: #f9f9f9;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    color: #17263d;
+}
+
+/* Carrossel com rolagem horizontal */
+.carousel {
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os cards */
+    overflow-x: auto; /* Habilita rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Ativa snapping para rolagem suave */
+    padding: 1rem;
+    scrollbar-width: thin; /* Personaliza largura da barra de rolagem no Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #00BFFF;
+    border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+/* Estilo dos cards */
+.servicos-caixa {
+    flex: 0 0 220px; /* Cada card tem largura fixa */
+    scroll-snap-align: start; /* Alinha o card no início */
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.servicos-caixa img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.servicos-caixa h3 {
+    font-size: 1.6rem;
+    color: #17263d;
+    margin-bottom: 0.8rem;
+}
+
+.servicos-caixa p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servicos-caixa {
+        flex: 0 0 180px; /* Cards menores para telas médias */
+        padding: 1rem;
+    }
+
+    .servicos-caixa img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .servicos-caixa h3 {
+        font-size: 1.4rem;
+    }
+
+    .servicos-caixa p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .servicos-caixa {
+        flex: 0 0 150px; /* Cards ainda menores */
+        padding: 0.8rem;
+    }
+
+    .servicos-caixa img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .servicos-caixa h3 {
+        font-size: 1.2rem;
+    }
+
+    .servicos-caixa p {
+        font-size: 0.9rem;
+    }
+}
