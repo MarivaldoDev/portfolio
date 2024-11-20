@@ -19,7 +19,7 @@ html{
 }
 
 .home2 {
-    padding: 5rem 0rem;
+    padding: 5rem 5rem;
     text-align: center;
     background-color: #263751;
     
@@ -27,7 +27,7 @@ html{
 
 .heading{
     font-size: 3.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: white;
 }
 
@@ -568,7 +568,7 @@ i:hover{
     }
 
     .card-container {
-        margin-top: 2rem;
+        margin-top: 5rem;
         margin-left: 0.5rem;
         /* margin-right: 1rem; */
     }
