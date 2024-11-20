@@ -19,13 +19,13 @@ html{
 }
 
 .home2 {
-    padding: 5rem 5rem;
+    padding: 5rem 0rem;
     text-align: center;
     background-color: #263751;
     
 }
 
-.heading {
+.heading{
     font-size: 3.5rem;
     margin-bottom: 30px;
     color: white;
@@ -245,17 +245,6 @@ i:hover{
 }
 
 
-/* .home2{
-    min-height: 30vw;
-    max-height: 150vw;
-    height: 20%;
-    transition: 3s ease;
-    padding: 5rem 6%;
-    background-color: #263751;
-} */
-
-
-
 .btn{
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -459,7 +448,7 @@ i:hover{
     }
 
     .heading {
-        font-size: 2.6rem; /* Reduz a fonte do título em telas menores */
+        font-size: 3.5rem; /* Reduz a fonte do título em telas menores */
     }
 
     .card-container {
@@ -571,11 +560,11 @@ i:hover{
 
 
     .home2 {
-        padding: 3rem 1.4rem;
+        padding: 5rem 1.4rem;
     }
 
     .heading {
-        font-size: 2rem; /* Título menor para telas muito pequenas */
+        font-size: 3.5rem; /* Título menor para telas muito pequenas */
     }
 
     .card-container {
@@ -586,7 +575,7 @@ i:hover{
 
     .card {
         width: 160px; /* Ajusta a largura para celulares */
-        height: 180px; /* Ajusta a altura para celulares */
+        height: 200px; /* Ajusta a altura para celulares */
     }
 
     .card img {
@@ -599,7 +588,7 @@ i:hover{
     }
 
     .card-content p {
-        font-size: 1.2rem; /* Ajusta o tamanho do texto */
+        font-size: 1.3rem; /* Ajusta o tamanho do texto */
     }
 
     .servicos-caixa video{
@@ -637,6 +626,7 @@ i:hover{
     }
 }
 
+
 @media (max-width: 375px) {
 
     .card-container {
@@ -648,12 +638,16 @@ i:hover{
 
     .card {
         width: 160px; /* Ajusta a largura dos cards para caber melhor em telas menores */
-        height: 180px; /* Ajusta a altura para ficar mais compacta */
+        height: 200px; /* Ajusta a altura para ficar mais compacta */
+    }
+
+    .card-content h3 {
+        font-size: 1.6rem; /* Tamanho do título ajustado para celulares */
     }
 
     .heading {
-        font-size: 3rem; /* Reduz o tamanho do título */
-        margin-bottom: 25px;
+        font-size: 3.5rem; /* Reduz o tamanho do título */
+        margin-bottom: 40px;
     }
 
     .servicos-caixa {
@@ -667,7 +661,7 @@ i:hover{
     }
 
     .servicos-caixa p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .servicos-caixa a {
