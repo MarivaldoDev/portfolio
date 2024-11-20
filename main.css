@@ -32,32 +32,34 @@ html{
 }
 
 .card-container {
-    margin-left: 10rem;
+    margin-left: 15rem;
     margin-top: 15rem;
     display: flex;
     flex-wrap: wrap; /* Permite que os cards passem para a linha seguinte, caso necessário */
-    gap: 30px; /* Espaçamento entre os cards */
+    gap: 65px; /* Espaçamento entre os cards */
     justify-content: space-between; /* Distribui os cards com espaçamento entre eles */
     max-width: 1250px;
     width: 100%;
+    height: auto;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: lightblue;
+    background: lightskyblue;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s;
-    width: 200px; /* Ajuste para ocupar o máximo de espaço disponível */
-    height: 220px; /* Altura ajustada para mais compacta */
+    transition: all ease-in-out 160ms;
+    width: 250px; /* Ajuste para ocupar o máximo de espaço disponível */
+    height: 230px; /* Altura ajustada para mais compacta */
 }
 
-.card:hover {
-    /* transform: scale(1.03); */
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra interna */
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 10px 20px 20px rgba(0, 0, 0.6);
+    opacity: 1;
 }
 
 .card img {
@@ -73,13 +75,13 @@ html{
 }
 
 .card-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color:black;
     margin: 5px 0;
 }
 
 .card-content p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: black;
     line-height: 1.5;
 }
@@ -453,17 +455,17 @@ i:hover{
     }
 
     .home2 {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1rem;
     }
 
     .heading {
-        font-size: 2.5rem; /* Reduz a fonte do título em telas menores */
+        font-size: 2.6rem; /* Reduz a fonte do título em telas menores */
     }
 
     .card-container {
         margin-top: 3rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 0.5rem;
+        /* margin-right: 5rem; */
         justify-content: center;
     }
 
@@ -478,11 +480,11 @@ i:hover{
     }
 
     .card-content h3 {
-        font-size: 1.1rem; /* Ajusta o tamanho do título para telas menores */
+        font-size: 1.4rem; /* Ajusta o tamanho do título para telas menores */
     }
 
     .card-content p {
-        font-size: 1rem; /* Ajusta o tamanho da descrição para telas menores */
+        font-size: 1.1rem; /* Ajusta o tamanho da descrição para telas menores */
     }
 
     .servicos-caixa {
@@ -569,7 +571,7 @@ i:hover{
 
 
     .home2 {
-        padding: 3rem 1rem;
+        padding: 3rem 1.4rem;
     }
 
     .heading {
@@ -578,8 +580,8 @@ i:hover{
 
     .card-container {
         margin-top: 2rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 0.5rem;
+        /* margin-right: 1rem; */
     }
 
     .card {
@@ -593,11 +595,11 @@ i:hover{
     }
 
     .card-content h3 {
-        font-size: 1rem; /* Tamanho do título ajustado para celulares */
+        font-size: 1.5rem; /* Tamanho do título ajustado para celulares */
     }
 
     .card-content p {
-        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+        font-size: 1.2rem; /* Ajusta o tamanho do texto */
     }
 
     .servicos-caixa video{
@@ -636,50 +638,22 @@ i:hover{
 }
 
 @media (max-width: 375px) {
-    .home2{
-        padding-bottom: 50rem;
+
+    .card-container {
+        margin-left: 0;
+        margin-top: 5rem;
+        gap: 20px; /* Menor espaçamento entre os cards */
+        justify-content: center; /* Centraliza os cards na tela */
+    }
+
+    .card {
+        width: 160px; /* Ajusta a largura dos cards para caber melhor em telas menores */
+        height: 180px; /* Ajusta a altura para ficar mais compacta */
     }
 
     .heading {
-        font-size: 3rem; /* Reduz ainda mais para dispositivos muito pequenos */
-        margin-bottom: 0.8rem; /* Espaço inferior reduzido */
-        padding: 0 1rem; /* Adiciona padding lateral para evitar corte do texto */
-    }
-
-    .carousel {
-        width: 90%; /* Ocupa quase toda a largura da tela */
-        margin: 0 auto; /* Centraliza o carrossel */
-        padding: 0.5rem; /* Reduz o espaçamento interno */
-        border: 1px solid #ccc; /* Reduz ainda mais a espessura da borda */
-        border-radius: 5px; /* Ajusta o arredondamento para um visual mais leve */
-        box-shadow: none; /* Remove sombras para simplificar */
-    }
-
-    .carousel .slides img {
-        width: 100%; /* Imagens completamente responsivas */
-        height: auto; /* Mantém proporções corretas */
-        border-radius: 4px; /* Suaviza as bordas das imagens */
-    }
-
-    .carousel .controls button {
-        padding: 4px; /* Reduz ainda mais o tamanho dos botões */
-        font-size: 12px; /* Ajusta o tamanho da fonte */
-        width: 25px; /* Define largura fixa para os botões */
-        height: 25px; /* Define altura fixa para os botões */
-        border-radius: 50%; /* Botões arredondados */
-        background-color: rgba(0, 0, 0, 0.4); /* Botões com maior transparência */
-    }
-
-    .controls #prev {
-        left: 2px; /* Posiciona as setas mais próximas das bordas */
-    }
-
-    .controls #next {
-        right: 10px;
-    }
-
-    .carousel:hover {
-        transform: none; /* Remove o efeito de zoom em telas muito pequenas */
+        font-size: 3rem; /* Reduz o tamanho do título */
+        margin-bottom: 25px;
     }
 
     .servicos-caixa {
