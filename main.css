@@ -18,6 +18,72 @@ html{
     overflow-x: hidden;
 }
 
+.home2 {
+    padding: 5rem 5rem;
+    text-align: center;
+    background-color: #263751;
+    
+}
+
+.heading {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.card-container {
+    margin-left: 10rem;
+    margin-top: 15rem;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards passem para a linha seguinte, caso necessário */
+    gap: 30px; /* Espaçamento entre os cards */
+    justify-content: space-between; /* Distribui os cards com espaçamento entre eles */
+    max-width: 1250px;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: lightblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 200px; /* Ajuste para ocupar o máximo de espaço disponível */
+    height: 220px; /* Altura ajustada para mais compacta */
+}
+
+.card:hover {
+    /* transform: scale(1.03); */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra interna */
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    color:black;
+    margin: 5px 0;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.5;
+}
+
 .logo{
     font-size: 2.5rem;
     color: #17263d;
@@ -177,97 +243,16 @@ i:hover{
 }
 
 
-.home2{
+/* .home2{
     min-height: 30vw;
     max-height: 150vw;
     height: 20%;
     transition: 3s ease;
     padding: 5rem 6%;
     background-color: #263751;
-}
-
-.carousel {
-    margin-left: 30%;
-    margin-top: 1rem;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    overflow: hidden;
-    border: 5px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: 0.5s ease;
-}
-
-.carousel:hover {
-    border-color: #00BFFF;
-    transform: scale(1.02);
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.python-img{
-    height: 60rem;
-    width: 20rem;
-    margin-top: 5%;
-}
-
-.django-img{
-    width: 80rem;
-}
-
-.mysql-img{
-    width: 50px;
-}
-
-.slides img {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none; /* Para permitir que o clique passe pela área vazia da control */
-}
+} */
 
 
-.controls button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-    pointer-events: auto; /* Para habilitar cliques apenas nos botões */
-}
-
-.controls button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.controls #prev {
-    position: fixed;
-    left: 20px; /* Define a posição fixa no canto esquerdo da tela */
-}
-
-.controls #next {
-    position: fixed;
-    right: 20px; /* Define a posição fixa no canto direito da tela */
-}
-
-.heading{
-    color: white;
-    font-size: 4.5rem;
-}
 
 .btn{
     display: inline-block;
@@ -467,25 +452,37 @@ i:hover{
         height: 50vw;
     }
 
+    .home2 {
+        padding: 4rem 1.5rem;
+    }
+
     .heading {
-        font-size: 3.5rem; /* Reduz o tamanho da fonte */
-        margin-bottom: 1.5rem; /* Diminui o espaçamento inferior */
+        font-size: 2.5rem; /* Reduz a fonte do título em telas menores */
     }
 
-    .carousel {
-        margin: 0 auto; /* Centraliza o carrossel */
-        width: 80%; /* Ajusta a largura para ocupar 90% da tela */
-        max-width: none; /* Remove o limite superior */
-        border-width: 3px; /* Reduz a largura da borda */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Suaviza o efeito de sombra */
+    .card-container {
+        margin-top: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        justify-content: center;
     }
 
-    .carousel:hover {
-        transform: none; /* Remove o efeito de zoom para telas menores */
+    .card {
+        width: 160px; /* Reduz a largura dos cards para telas menores */
+        height: 200px; /* Ajusta a altura para melhorar o layout */
     }
 
-    .slides img {
-        border-radius: 10px; /* Adiciona um leve arredondamento para imagens */
+    .card img {
+        width: 60px; /* Ajusta o tamanho da imagem nos cards */
+        height: 60px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem; /* Ajusta o tamanho do título para telas menores */
+    }
+
+    .card-content p {
+        font-size: 1rem; /* Ajusta o tamanho da descrição para telas menores */
     }
 
     .servicos-caixa {
@@ -571,40 +568,36 @@ i:hover{
     }
 
 
-    .home2{
-        padding: 5rem 2%;
-        padding-bottom: 70rem;
+    .home2 {
+        padding: 3rem 1rem;
     }
 
     .heading {
-        font-size: 3rem; /* Fonte menor para telas compactas */
-        margin-bottom: 1rem; /* Ajusta o espaçamento inferior */
+        font-size: 2rem; /* Título menor para telas muito pequenas */
     }
 
-    .carousel {
-        width: 100%; /* Ocupa toda a largura da tela */
-        padding: 1rem; /* Adiciona espaço ao redor do conteúdo */
-        border: 2px solid #ccc; /* Reduz ainda mais a espessura da borda */
-        border-radius: 8px; /* Ajusta o arredondamento */
+    .card-container {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
-    .carousel .controls button {
-        padding: 6px; /* Reduz o tamanho dos botões */
-        font-size: 14px; /* Diminui a fonte dos botões */
-        border-radius: 50%; /* Mantém o formato circular */
+    .card {
+        width: 160px; /* Ajusta a largura para celulares */
+        height: 180px; /* Ajusta a altura para celulares */
     }
 
-    .controls #prev {
-        left: 5px; /* Posiciona as setas mais próximas do conteúdo */
+    .card img {
+        width: 60px; /* Ajusta o tamanho da imagem nos cards */
+        height: 60px;
     }
 
-    .controls #next {
-        right: 15px;
+    .card-content h3 {
+        font-size: 1rem; /* Tamanho do título ajustado para celulares */
     }
 
-    .slides img {
-        width: 100%; /* Garante que as imagens sejam responsivas */
-        height: auto; /* Ajusta a altura automaticamente */
+    .card-content p {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
     }
 
     .servicos-caixa video{
