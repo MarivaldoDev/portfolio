@@ -52,8 +52,8 @@ html{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all ease-in-out 160ms;
-    width: 250px; /* Ajuste para ocupar o máximo de espaço disponível */
-    height: 230px; /* Altura ajustada para mais compacta */
+    width: 320px; /* Ajuste para ocupar o máximo de espaço disponível */
+    height: 280px; /* Altura ajustada para mais compacta */
 }
 
 .card:hover{
@@ -461,7 +461,7 @@ i:hover{
     }
 
     .card {
-        width: 160px; /* Reduz a largura dos cards para telas menores */
+        width: 250px; /* Reduz a largura dos cards para telas menores */
         height: 200px; /* Ajusta a altura para melhorar o layout */
     }
 
@@ -576,7 +576,7 @@ i:hover{
     }
 
     .card {
-        width: 170px; /* Ajusta a largura para celulares */
+        width: 200px; /* Ajusta a largura para celulares */
         height: 210px; /* Ajusta a altura para celulares */
     }
 
@@ -641,7 +641,7 @@ i:hover{
     }
 
     .card {
-        width: 160px; /* Ajusta a largura dos cards para caber melhor em telas menores */
+        width: 220px; /* Ajusta a largura dos cards para caber melhor em telas menores */
         height: 200px; /* Ajusta a altura para ficar mais compacta */
     }
 
@@ -650,7 +650,7 @@ i:hover{
     }
 
     .card-content p {
-        line-height: 1.1;
+        line-height: 1.3;
         font-size: 1.4rem; /* Tamanho do título ajustado para celulares */
     }
 
