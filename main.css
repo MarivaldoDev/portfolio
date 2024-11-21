@@ -26,8 +26,8 @@ html{
 }
 
 .heading{
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 5rem;
+    margin-bottom: 10px;
     color: white;
 }
 
@@ -123,6 +123,7 @@ html{
 .navbar a:hover,
 .navbar a.activate{
     color: white;
+    text-decoration: underline white;
 }
 
 .translate-btn {
@@ -200,24 +201,44 @@ span{
     font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
 }
 
-.redes i{
+.redes a{
+    position: relative;
+    text-decoration: none;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 8rem;
-    height: 8rem;
+    width: 70px;
+    height: 70px;
     background: transparent;
-    border-radius: 40%;
-    border: .6rem solid blue;
-    font-size: 4rem;
+    border-radius: 50%;
+    border: .3rem solid blue;
+    font-size: 30px;
+    color: rgb(149, 203, 236);
     margin: 3rem 1.5rem 3rem 0;
-    transition: .5s ease;
-    width: 10rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
 }
 
-i:hover{
+.redes a:hover{
+    color: rgb(11, 11, 75);
     transform: scale(1.1);
-    color: white;
+}
+
+.redes a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: lightblue;
+    z-index: -1;
+    transition: .5s;
+}
+
+.redes a:hover::before{
+    width: 100%;
 }
 
 .curriculo a{
@@ -700,4 +721,68 @@ i:hover{
     .footer-icone a i {
         font-size: 1.6rem;
     }
+}
+
+@media (max-width: 320px) {
+    .card-container {
+        margin: 0 auto; /* Remove margens extras */
+        gap: 10px; /* Reduz ainda mais o espaçamento entre os cards */
+        justify-content: center; /* Centraliza os cards */
+    }
+
+    .card {
+        width: 120px; /* Menor largura para caber confortavelmente */
+        height: 160px; /* Menor altura mantendo a proporção */
+    }
+
+    .card img {
+        width: 50px; /* Reduz o tamanho da imagem */
+        height: 50px;
+        margin-top: 5px;
+    }
+
+    .card-content {
+        padding: 5px; /* Padding menor para economizar espaço */
+    }
+
+    .card-content h3 {
+        font-size: 0.9rem; /* Reduz o título para caber */
+    }
+
+    .card-content p {
+        font-size: 0.8rem; /* Reduz o texto para boa leitura */
+        line-height: 1.2; /* Mantém espaçamento confortável */
+    }
+
+    .heading {
+        font-size: 1.8rem; /* Reduz o título principal da seção */
+        margin-bottom: 15px; /* Ajusta o espaçamento inferior */
+    }
+
+    .servicos-caixa {
+        padding: 1.3rem;
+        border-radius: 1rem;
+        border-width: 0.05rem;
+    }
+
+    .servicos-caixa h3 {
+        font-size: 1.6rem;
+    }
+
+    .servicos-caixa p {
+        font-size: 1.3rem;
+    }
+
+    .servicos-caixa a {
+        font-size: 1.4rem; /* Reduz ainda mais o tamanho da fonte */
+        padding: 0.4rem 1rem; /* Padding mais compacto */
+        border-radius: 1rem; /* Bordas mais discretas */
+        width: 80%; /* Ocupa toda a largura disponível */
+    }
+
+    .servicos-caixa video {
+        width: 100%; /* Ocupa quase toda a largura */
+    }
+
+    
 }
