@@ -8,7 +8,7 @@ menuIcon.onclick = () => {
 
 
 let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+let navLinks = document.querySelectorAll('header nav a button');
 
 window.onscroll = () => {
     sections.forEach(sec => {
