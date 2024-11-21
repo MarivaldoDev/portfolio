@@ -753,7 +753,7 @@ span{
     }
 
     .card-content p {
-        font-size: 0.8rem; /* Reduz o texto para boa leitura */
+        font-size: 0.6rem; /* Reduz o texto para boa leitura */
         line-height: 1.1; /* Mantém espaçamento confortável */
     }
 
