@@ -754,7 +754,7 @@ span{
 
     .card-content p {
         font-size: 0.6rem; /* Reduz o texto para boa leitura */
-        line-height: 1.1; /* Mantém espaçamento confortável */
+        line-height: 1; /* Mantém espaçamento confortável */
     }
 
     .heading {
