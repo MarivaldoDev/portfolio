@@ -724,6 +724,9 @@ span{
 }
 
 @media (max-width: 320px) {
+    html{
+        font-size: 45%;
+    }
     .card-container {
         margin: 0 auto; /* Remove margens extras */
         gap: 10px; /* Reduz ainda mais o espaçamento entre os cards */
@@ -751,7 +754,7 @@ span{
 
     .card-content p {
         font-size: 0.8rem; /* Reduz o texto para boa leitura */
-        line-height: 1.2; /* Mantém espaçamento confortável */
+        line-height: 1.5; /* Mantém espaçamento confortável */
     }
 
     .heading {
