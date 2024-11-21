@@ -754,7 +754,7 @@ span{
 
     .card-content p {
         font-size: 0.8rem; /* Reduz o texto para boa leitura */
-        line-height: 1.5; /* Mantém espaçamento confortável */
+        line-height: 1.2; /* Mantém espaçamento confortável */
     }
 
     .heading {
@@ -773,7 +773,7 @@ span{
     }
 
     .servicos-caixa p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .servicos-caixa a {
