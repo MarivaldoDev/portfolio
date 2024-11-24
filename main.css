@@ -334,7 +334,7 @@ span{
     margin-top: 2rem;
 }
 
-.servicos-caixa a {
+.servicos-caixa .btn {
     margin-left: 12rem;
     font-size: 2rem;
 }
@@ -346,6 +346,17 @@ span{
     flex-shrink: 1; /* Permite que o parágrafo se ajuste */
 }
 
+.servicos-caixa .alison{
+    text-decoration: none;
+    color: lightskyblue;
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    transition: .5s;
+}
+
+.alison:hover{
+    color: rgb(71, 71, 255);
+}
 
 .footer{
     display: flex;
@@ -515,12 +526,17 @@ span{
         margin: 0.5rem 0 2rem;
     }
 
+    .servicos-caixa .alison{
+        font-size: 1.5rem;
+        margin: 0.5rem 0 2rem;
+    }
+
     .servicos-caixa video {
         width: 100%; /* Video responsivo */
         margin-left: 0;
     }
 
-    .servicos-caixa a {
+    .servicos-caixa .btn {
         display: inline-block; /* Garante exibição como botão */
         margin: 0 auto; /* Centraliza horizontalmente */
         padding: 1rem 2rem; /* Adiciona espaço interno */
@@ -532,7 +548,7 @@ span{
         transition: 0.3s ease; /* Adiciona efeito de hover */
     }
 
-    .servicos-caixa a:hover {
+    .servicos-caixa .btn:hover {
         background-color: lightblue; /* Cor de destaque no hover */
         color: black; /* Cor do texto no hover */
         transform: scale(1.05); /* Leve zoom no hover */
@@ -625,7 +641,12 @@ span{
         font-size: 1.6rem;
     }
 
-    .servicos-caixa a {
+    .servicos-caixa .alison{
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .servicos-caixa .btn {
         font-size: 1.4rem; /* Fonte menor para telas compactas */
         padding: 0.8rem 1.6rem; /* Ajusta o padding */
         border-radius: 2rem; /* Bordas mais sutis */
@@ -694,7 +715,11 @@ span{
         font-size: 1.5rem;
     }
 
-    .servicos-caixa a {
+    .servicos-caixa .alison{
+        font-size: 1.5rem;
+    }
+
+    .servicos-caixa .btn {
         font-size: 1.4rem; /* Reduz ainda mais o tamanho da fonte */
         padding: 0.6rem 1.2rem; /* Padding mais compacto */
         border-radius: 1rem; /* Bordas mais discretas */
