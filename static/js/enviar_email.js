@@ -1,29 +1,25 @@
-const form = document.querySelector("form");
-const nome = document.getElementById("nome");
-const email = document.getElementById("email");
-const numero = document.getElementById("numero");
-const assunto = document.getElementById("assunto");
-const mensagem = document.getElementById("mensagem");
+const form = document.getElementById('contact-form');
+const successMessage = document.getElementById('success-message');
 
+form.addEventListener('submit', async function (e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
 
-function enviar(){
-    const bodymessage = `Nome: ${nome.value}<br> Email: ${email.value}<br> Número: ${numero.value}<br> Mensagem: ${mensagem.value}`;
+    const formData = new FormData(form);
 
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "testesdepython2@gmail.com",
-        Password : "3E124371FBFFE8A35B7C89D59F60AEC14D7B",
-        To : email.value,
-        From : "testesdepython2@gmail.com",
-        Subject : assunto.value,
-        Body : bodymessage
-    }).then(
-      message => alert(message)
-    );
-}
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    enviar();
+        if (response.ok) {
+            successMessage.style.display = 'block'; // Mostra a mensagem de sucesso
+            form.reset(); // Limpa o formulário
+        } else {
+            alert('Ocorreu um erro ao enviar o formulário. Tente novamente.');
+        }
+    } catch (error) {
+        alert('Erro ao enviar o formulário. Verifique sua conexão e tente novamente.');
+    }
 });

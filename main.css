@@ -411,6 +411,13 @@ span{
     cursor: pointer;
 }
 
+.contact p{
+    display: none;
+    margin-top: 6rem;
+    font-size: 1.6rem;
+    color: greenyellow;
+}
+
 .footer{
     display: flex;
     justify-content: space-between;

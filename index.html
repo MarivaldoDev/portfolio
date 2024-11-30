@@ -11,6 +11,7 @@
     <script src="static/js/magic_text.js" defer></script>
     <script src="static/js/menu.js" defer></script>
     <script src="static/js/traducao.js" defer></script>
+    <script src="static/js/enviar_email.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Marivaldo Pedro</title>
@@ -165,18 +166,22 @@
   <section class="contact" id="contato">
     <h2 class="heading">Fale Comigo!</h2>
 
-    <form action="#">
+    <form id="contact-form" action="https://formspree.io/f/xvgovvad" method="POST">
         <div class="input-box">
-            <input type="text" placeholder="Digite seu nome" id="nome">
-            <input type="email" placeholder="Seu Email" id="email">
+            <input type="text" placeholder="Digite seu nome" name="nome">
+            <input type="email" placeholder="Seu Email" name="email">
         </div>
 
         <div class="input-box">
-            <input type="number" placeholder="Seu número" id="numero">
-            <input type="text" placeholder="Assunto do Email" id="assunto">
+            <input type="number" placeholder="Seu número" name="numero">
+            <input type="text" placeholder="Assunto do Email" name="assunto">
         </div>
-        <textarea name="" id="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
         <button type="submit" class="btn">Enviar</button>
+
+        <p id="success-message">
+            Sua mensagem foi enviada com sucesso!
+        </p>
     </form>
 
   </section>
