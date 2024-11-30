@@ -27,13 +27,13 @@ html{
 
 .heading{
     font-size: 5rem;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
     color: white;
 }
 
 .card-container {
     margin-left: 15rem;
-    margin-top: 15rem;
+    margin-top: 10rem;
     display: flex;
     flex-wrap: wrap; /* Permite que os cards passem para a linha seguinte, caso necessário */
     gap: 65px; /* Espaçamento entre os cards */
@@ -363,14 +363,15 @@ span{
 }
 
 .contact h2{
-    margin-bottom: 4rem;
+    text-align: center;
+    margin-bottom: 6rem;
 }
 
 .contact form{
     max-width: 80rem;
     margin: 1rem auto;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .contact form .input-box{
@@ -405,6 +406,7 @@ span{
 }
 
 .contact form .btn{
+    font-size: 2rem;
     margin-top: 4rem;
     cursor: pointer;
 }
@@ -434,7 +436,7 @@ span{
 }
 
 .footer-icone a:hover{
-    background-color: black;
+    background-color: white;
     box-shadow: 0 0 1rem blue;
 }
 
