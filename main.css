@@ -358,6 +358,57 @@ span{
     color: rgb(71, 71, 255);
 }
 
+.contact{
+    background-color: #263751;
+}
+
+.contact h2{
+    margin-bottom: 4rem;
+}
+
+.contact form{
+    max-width: 80rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: .8rem;
+    margin: .7rem 0;
+    background-color: #17263d;
+    color: white;
+}
+
+.contact form .input-box input::placeholder,
+.contact form textarea::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.contact form .input-box input{
+    width: 40%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 4rem;
+    cursor: pointer;
+}
+
 .footer{
     display: flex;
     justify-content: space-between;
@@ -412,6 +463,10 @@ span{
     
     .home2{
         padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
     }
 
     .footer{
@@ -652,6 +707,10 @@ span{
         border-radius: 2rem; /* Bordas mais sutis */
         margin-top: 1rem; /* Espaço extra entre elementos */
         width: 80%; /* Ocupa 90% da largura do container */
+    }
+
+    .contact form .input-box input{
+        width: 100%;
     }
 
     .footer {
