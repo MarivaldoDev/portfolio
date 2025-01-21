@@ -43,4 +43,4 @@ ScrollReveal({
 ScrollReveal().reveal('.home, .home2', {origin: 'top'});
 ScrollReveal().reveal('.img-main, .servicos-container', {origin: 'bottom'});
 ScrollReveal().reveal('.conteudo h1, .heading', {origin: 'left'});
-ScrollReveal().reveal('.conteudo p, .input-box, textarea', {origin: 'right'});
+ScrollReveal().reveal('.conteudo p', {origin: 'right'});
