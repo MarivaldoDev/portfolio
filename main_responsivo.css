@@ -1,0 +1,881 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+body{
+    background-color: #17263d;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.home2 {
+    padding: 5rem 5rem;
+    text-align: center;
+    background-color: #263751;
+    
+}
+
+.heading{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.card-container {
+    margin-left: 15rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards passem para a linha seguinte, caso necessário */
+    gap: 65px; /* Espaçamento entre os cards */
+    justify-content: space-between; /* Distribui os cards com espaçamento entre eles */
+    max-width: 1250px;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: lightskyblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all ease-in-out 160ms;
+    width: 360px; /* Ajuste para ocupar o máximo de espaço disponível */
+    height: 300px; /* Altura ajustada para mais compacta */
+}
+
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 10px 20px 20px rgba(0, 0, 0.6);
+    opacity: 1;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    color:black;
+    margin: 5px 0;
+}
+
+.card-content p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    line-height: 2;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: #17263d;
+    font-weight: 600;
+    cursor: default;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: #17263d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid #17263d;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: lightblue;
+    margin-left: 4rem;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.activate{
+    color: white;
+    text-decoration: underline white;
+}
+
+.translate-btn {
+    padding: 0.5rem 1rem;
+    background: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: lightblue;
+    display: none;
+}
+
+section{
+    min-height: 50vw;
+    padding: 2rem 6%;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo h4{
+    color: white;
+    font-size: clamp(2rem, 2vw + 1rem, 3.2rem);
+    font-weight: 700;
+}
+
+.conteudo h4:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span{
+    color: #00BFFF;
+}
+
+.conteudo h1{
+    color: white;
+    font-size: clamp(3rem, 4vw + 1rem, 5.6rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.img-main img{
+    width: 20vw;
+    height: 20vw;
+    animation: voar 4s ease-in-out infinite;
+    border-radius: 50%;
+}
+
+
+@keyframes voar{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2rem);
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+
+.conteudo p{
+    color: white;
+    font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+}
+
+.redes a{
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border-radius: 50%;
+    border: .3rem solid blue;
+    font-size: 30px;
+    color: rgb(149, 203, 236);
+    margin: 3rem 1.5rem 3rem 0;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.redes a:hover{
+    color: rgb(11, 11, 75);
+    transform: scale(1.1);
+}
+
+.redes a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: lightblue;
+    z-index: -1;
+    transition: .5s;
+}
+
+.redes a:hover::before{
+    width: 100%;
+}
+
+.curriculo a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.download{
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background: #00BFFF;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #0000CD;
+    font-size: clamp(1.2rem, 1.2vw + 1rem, 1.6rem);
+    color: black;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .9s ease;
+}
+
+.download:hover{
+    background: lightblue;
+    box-shadow: none;
+    transform: scale(1.1);
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #00BFFF;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #0000CD;
+    font-size: 1.6rem;
+    color: black;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .3s ease;
+    width: 20rem;
+    text-align: center;
+}
+
+.btn:hover{
+    background: lightblue;
+    box-shadow: none;
+}
+
+.servicos h2 {
+    transition: 3s ease;
+    font-size: 4rem;
+    margin-bottom: 7rem;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.servicos-container .servicos-caixa {
+    box-shadow: 0 0 1rem white;
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid;
+    transition: 0.5s ease;
+    height: 55rem; /* Define uma altura fixa */
+    overflow: hidden; /* Oculta o excesso de texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantém o layout interno uniforme */
+}
+
+.servicos-container .servicos-caixa:hover {
+    border-color: #00BFFF;
+    transform: scale(1.02);
+}
+
+
+.servicos-caixa video {
+    margin-left: 7rem;
+    border-radius: 2rem;
+}
+
+.servicos-caixa h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.servicos-caixa .btn {
+    margin-left: 12rem;
+    font-size: 2rem;
+}
+
+.servicos-caixa p {
+    color: white;
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    flex-shrink: 1; /* Permite que o parágrafo se ajuste */
+}
+
+.servicos-caixa .alison{
+    text-decoration: none;
+    color: lightskyblue;
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    transition: .5s;
+}
+
+.alison:hover{
+    color: rgb(71, 71, 255);
+}
+
+.contact{
+    background-color: #263751;
+}
+
+.contact h2{
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.contact form{
+    max-width: 80rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: .8rem;
+    margin: .7rem 0;
+    background-color: #17263d;
+    color: white;
+}
+
+.contact form .input-box input::placeholder,
+.contact form textarea::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.contact form .input-box input{
+    width: 40%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    font-size: 2rem;
+    margin-top: 4rem;
+    cursor: pointer;
+}
+
+.contact p{
+    display: none;
+    margin-top: 6rem;
+    font-size: 1.6rem;
+    color: greenyellow;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #445771;
+}
+
+.footer-texto{
+    color: white;
+    font-size: 1.6rem;
+}
+
+.footer-icone{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background-color: lightblue;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-icone a:hover{
+    background-color: white;
+    box-shadow: 0 0 1rem blue;
+}
+
+.footer-icone a i{
+    font-size: 2.4rem;
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    
+    .servicos{
+        padding: 5rem;
+    }
+    
+    .home2{
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4%;
+        background: #17263d;
+        border-top: .1rem solid #17263d;
+        box-shadow: 0 .5rem 1rem #17263d;
+        z-index: 100;
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .translate-btn {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .conteudo {
+        order: 2;
+    }
+
+    .conteudo h4{
+        font-size: 2.6rem;
+    }
+
+    .conteudo h1{
+        font-size: 5rem;
+    }
+
+    .conteudo{
+        order: 2;
+    }
+
+    .img-main img{
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .home2 {
+        padding: 4rem 1rem;
+    }
+
+    .heading {
+        font-size: 3.5rem; /* Reduz a fonte do título em telas menores */
+    }
+
+    .card-container {
+        margin-top: 3rem;
+        margin-left: 0.5rem;
+        /* margin-right: 5rem; */
+        justify-content: center;
+    }
+
+    .card {
+        width: 250px; /* Reduz a largura dos cards para telas menores */
+        height: 200px; /* Ajusta a altura para melhorar o layout */
+    }
+
+    .card img {
+        width: 60px; /* Ajusta o tamanho da imagem nos cards */
+        height: 60px;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem; /* Ajusta o tamanho do título para telas menores */
+    }
+
+    .card-content p {
+        font-size: 1.1rem; /* Ajusta o tamanho da descrição para telas menores */
+    }
+
+    .servicos-caixa {
+        flex: 1 1 100%; /* Ajusta a largura para ocupar 100% */
+        padding: 2rem 1.5rem;
+        height: auto; /* Permite altura flexível */
+        border-radius: 1.5rem;
+    }
+
+    .servicos-caixa h3 {
+        font-size: 2rem;
+    }
+
+    .servicos-caixa p {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 2rem;
+    }
+
+    .servicos-caixa .alison{
+        font-size: 1.5rem;
+        margin: 0.5rem 0 2rem;
+    }
+
+    .servicos-caixa video {
+        width: 100%; /* Video responsivo */
+        margin-left: 0;
+    }
+
+    .servicos-caixa .btn {
+        display: inline-block; /* Garante exibição como botão */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        padding: 1rem 2rem; /* Adiciona espaço interno */
+        font-size: 1.6rem; /* Ajusta o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+        border-radius: 5rem; /* Bordas arredondadas */
+        background-color: #00BFFF; /* Destaque para o link */
+        color: black; /* Cor do texto */
+        transition: 0.3s ease; /* Adiciona efeito de hover */
+    }
+
+    .servicos-caixa .btn:hover {
+        background-color: lightblue; /* Cor de destaque no hover */
+        color: black; /* Cor do texto no hover */
+        transform: scale(1.05); /* Leve zoom no hover */
+    }
+
+    .footer {
+        padding: 2rem 5%; /* Reduz o padding em dispositivos menores */
+        flex-direction: column; /* Reorganiza os elementos verticalmente */
+        text-align: center;
+    }
+
+    .footer-texto {
+        font-size: 1.5rem; /* Reduz tamanho da fonte */
+    }
+
+    .footer-icone {
+        margin: 0.8rem; /* Aumenta espaço entre ícones */
+    }
+
+    .footer-icone a i {
+        font-size: 2rem; /* Ajusta tamanho do ícone */
+    }
+
+}
+
+@media (max-width: 617px){
+    .img-main img{
+        width: 70vw;
+        height: 70vw;
+        margin-top: 4rem;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    .home{
+        padding-bottom: 20rem;
+    }
+
+    .img-main img{
+        width: 60vw;
+        height: 60vw;
+    }
+
+
+    .home2 {
+        padding: 5rem 1.4rem;
+    }
+
+    .heading {
+        font-size: 4rem; /* Título menor para telas muito pequenas */
+    }
+
+    .card-container {
+        margin-top: 5rem;
+        margin-left: 0.5rem;
+        /* margin-right: 1rem; */
+    }
+
+    .card {
+        width: 200px; /* Ajusta a largura para celulares */
+        height: 210px; /* Ajusta a altura para celulares */
+    }
+
+    .card img {
+        width: 60px; /* Ajusta o tamanho da imagem nos cards */
+        height: 60px;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem; /* Tamanho do título ajustado para celulares */
+    }
+
+    .card-content p {
+        line-height: 1.2;
+        font-size: 1.5rem; /* Ajusta o tamanho do texto */
+    }
+
+    .servicos-caixa video{
+        width: 100%;
+       
+    }
+
+    .servicos-caixa p {
+        line-height: 1.2;
+        font-size: 1.6rem;
+    }
+
+    .servicos-caixa .alison{
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .servicos-caixa .btn {
+        font-size: 1.4rem; /* Fonte menor para telas compactas */
+        padding: 0.8rem 1.6rem; /* Ajusta o padding */
+        border-radius: 2rem; /* Bordas mais sutis */
+        margin-top: 1rem; /* Espaço extra entre elementos */
+        width: 80%; /* Ocupa 90% da largura do container */
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+
+    .footer {
+        padding: 1.5rem 3%; /* Ajuste mais compacto para telas pequenas */
+    }
+
+    .footer-texto {
+        font-size: 1.5rem; /* Fonte menor */
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-icone {
+        padding: 0.6rem 0.8rem; /* Padding mais compacto */
+    }
+
+    .footer-icone a i {
+        font-size: 1.8rem; /* Ícones ainda menores */
+    }
+}
+
+
+@media (max-width: 375px) {
+
+    .card-container {
+        margin-left: 0;
+        margin-top: 5rem;
+        gap: 20px; /* Menor espaçamento entre os cards */
+        justify-content: center; /* Centraliza os cards na tela */
+    }
+
+    .card {
+        width: 220px; /* Ajusta a largura dos cards para caber melhor em telas menores */
+        height: 200px; /* Ajusta a altura para ficar mais compacta */
+    }
+
+    .card-content h3 {
+        font-size: 1.6rem; /* Tamanho do título ajustado para celulares */
+    }
+
+    .card-content p {
+        line-height: 1.3;
+        font-size: 1.4rem; /* Tamanho do título ajustado para celulares */
+    }
+
+    .heading {
+        font-size: 3.5rem; /* Reduz o tamanho do título */
+        margin-bottom: 40px;
+    }
+
+    .servicos-caixa {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        border-width: 0.05rem;
+    }
+
+    .servicos-caixa h3 {
+        font-size: 1.6rem;
+    }
+
+    .servicos-caixa p {
+        font-size: 1.5rem;
+    }
+
+    .servicos-caixa .alison{
+        font-size: 1.5rem;
+    }
+
+    .servicos-caixa .btn {
+        font-size: 1.4rem; /* Reduz ainda mais o tamanho da fonte */
+        padding: 0.6rem 1.2rem; /* Padding mais compacto */
+        border-radius: 1rem; /* Bordas mais discretas */
+        width: 80%; /* Ocupa toda a largura disponível */
+    }
+
+    .servicos-caixa video {
+        width: 100%; /* Ocupa quase toda a largura */
+    }
+
+    .footer {
+        padding: 1rem; /* Reduz padding ao máximo */
+        gap: 1rem; /* Espaçamento consistente entre elementos */
+    }
+
+    .footer-texto {
+        font-size: 1.4rem; /* Texto menor para telas muito pequenas */
+    }
+
+    .footer-icone {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .footer-icone a i {
+        font-size: 1.6rem;
+    }
+}
+
+/* ADIÇÃO: Garante que vídeos não ultrapassem o container */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* AJUSTE: Torna a seção .home mais fluida */
+.home {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 6rem 2rem 2rem;
+}
+
+/* AJUSTE: Impede que textos e imagens na home fiquem apertados demais */
+.conteudo {
+    flex: 1 1 300px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.img-main {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+/* ADIÇÃO: Melhora layout em tablets */
+@media (max-width: 991px) {
+    .card-container {
+        justify-content: center;
+        margin-left: 0;
+        gap: 3rem;
+    }
+}
+
+/* AJUSTE: Melhor responsividade do formulário */
+@media (max-width: 768px) {
+    .contact form .input-box input {
+        width: 100% !important;
+    }
+}
+
+/* AJUSTE: Tamanho mínimo para o botão de currículo */
+.download {
+    min-width: 200px;
+}
+
+/* AJUSTE: Reduz espaçamento nos cards para caber melhor */
+@media (max-width: 450px) {
+    .redes a {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .download {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .home {
+        padding: 4rem 1rem 6rem;
+    }
+}
