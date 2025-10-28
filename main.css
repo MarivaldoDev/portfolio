@@ -19,10 +19,12 @@ html{
 }
 
 .home2 {
-    padding: 5rem 5rem;
+    /* Use percent padding so large screens keep nice margins and container centers */
+    padding: 5rem 8%;
     text-align: center;
     background-color: #263751;
-    
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .heading{
@@ -32,15 +34,15 @@ html{
 }
 
 .card-container {
-    margin-left: 15rem;
-    margin-top: 10rem;
+    /* Center container on large screens and use responsive padding/gap */
+    margin: 10rem auto 0;
+    padding: 0 2rem;
     display: flex;
     flex-wrap: wrap; /* Permite que os cards passem para a linha seguinte, caso necessário */
-    gap: 65px; /* Espaçamento entre os cards */
-    justify-content: space-between; /* Distribui os cards com espaçamento entre eles */
+    gap: 3.2rem; /* Espaçamento entre os cards (uso rem para consistência) */
+    justify-content: center; /* Centraliza os cards */
     max-width: 1250px;
     width: 100%;
-    height: auto;
 }
 
 .card {
@@ -51,15 +53,19 @@ html{
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: all ease-in-out 160ms;
-    width: 360px; /* Ajuste para ocupar o máximo de espaço disponível */
-    height: 300px; /* Altura ajustada para mais compacta */
+    /* constrain with flex so cards adapt to available width on mid/large screens */
+    transition: transform 160ms ease-in-out, box-shadow 160ms ease-in-out;
+    flex: 1 1 320px;
+    max-width: 360px; /* keeps design intent on wide screens */
+    min-height: 260px;
 }
 
 .card:hover{
-    transform: scale(1.2);
-    box-shadow: 10px 20px 20px rgba(0, 0, 0.6);
+    /* Less aggressive hover to avoid layout shift and overflow on medium/large screens */
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
     opacity: 1;
+    z-index: 10;
 }
 
 .card img {
@@ -67,6 +73,7 @@ html{
     height: 80px;
     object-fit: cover;
     margin-top: 10px;
+    max-width: 22%;
 }
 
 .card-content {
@@ -310,11 +317,13 @@ span{
     text-align: center;
     border: .2rem solid;
     transition: 0.5s ease;
-    height: 55rem; /* Define uma altura fixa */
-    overflow: hidden; /* Oculta o excesso de texto */
+    /* Allow the box to size naturally instead of forcing a huge fixed height */
+    min-height: 28rem;
+    overflow: visible; /* Allow content to flow on medium screens */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Mantém o layout interno uniforme */
+    align-items: center; /* centraliza conteúdo horizontalmente (vídeo, títulos, botões) */
 }
 
 .servicos-container .servicos-caixa:hover {
@@ -324,7 +333,11 @@ span{
 
 
 .servicos-caixa video {
-    margin-left: 7rem;
+    display: block;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 720px; /* evita vídeos enormes em telas muito largas */
+    height: auto;
     border-radius: 2rem;
 }
 
@@ -335,7 +348,7 @@ span{
 }
 
 .servicos-caixa .btn {
-    margin-left: 12rem;
+    margin: 0 auto; /* center on all screen sizes */
     font-size: 2rem;
 }
 
