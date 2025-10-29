@@ -83,14 +83,14 @@ html{
 
 .card-content h3 {
     font-weight: normal;
-    font-size: 1.9rem; /* aumentado para melhor leitura */
+    font-size: 1.7rem; /* aumentado para melhor leitura */
     color:black;
     margin: 5px 0;
 }
 
 .card-content p {
     font-weight: bold;
-    font-size: 1.7rem; /* aumentado para melhor leitura */
+    font-size: 1.5rem; /* aumentado para melhor leitura */
     color: black;
     line-height: 2;
 }
@@ -318,7 +318,7 @@ span{
     border: .2rem solid;
     transition: 0.5s ease;
     /* Allow the box to size naturally instead of forcing a huge fixed height */
-    min-height: 28rem;
+    min-height: 26rem;
     overflow: visible; /* Allow content to flow on medium screens */
     display: flex;
     flex-direction: column;
@@ -690,8 +690,8 @@ span{
     }
 
     .card {
-        width: 140px; /* largura reduzida para celulares */
-        height: 150px; /* Ajusta a altura para celulares */
+        width: 80px; /* largura reduzida para celulares */
+        height: 100px; /* Ajusta a altura para celulares */
     }
 
     .card img {
@@ -704,8 +704,8 @@ span{
     }
 
     .card-content p {
-        line-height: 1.2;
-        font-size: 1.6rem; /* Ajusta o tamanho do texto */
+        line-height: 1.6;
+        font-size: 1.8rem; /* Ajusta o tamanho do texto */
     }
 
     .servicos-caixa video{
