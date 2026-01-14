@@ -161,6 +161,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10rem;
 }
 
 .conteudo h4{
@@ -181,12 +182,12 @@ span{
     color: white;
     font-size: clamp(3rem, 4vw + 1rem, 5.6rem);
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.3
 }
 
 .img-main img{
-    width: 20vw;
-    height: 20vw;
+    width: 18vw;
+    height: 18vw;
     animation: voar 4s ease-in-out infinite;
     border-radius: 50%;
 }
@@ -305,7 +306,7 @@ span{
 .servicos-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; /* faz com que todas as caixas tenham altura igual */
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -318,13 +319,13 @@ span{
     text-align: center;
     border: .2rem solid;
     transition: 0.5s ease;
-    /* Allow the box to size naturally instead of forcing a huge fixed height */
+    /* altura padronizada para consistência entre colunas */
     min-height: 28rem;
-    overflow: visible; /* Allow content to flow on medium screens */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Mantém o layout interno uniforme */
-    align-items: center; /* centraliza conteúdo horizontalmente (vídeo, títulos, botões) */
+    justify-content: space-between;
+    overflow: visible; /* Allow content to flow on medium screens */
+    align-items: stretch; /* permite que o conteúdo interno se alinhe corretamente */
 }
 
 .servicos-container .servicos-caixa:hover {
@@ -493,6 +494,11 @@ span{
         min-height: auto;
     }
 
+    .card{
+        height: auto;
+        width: auto;
+    }
+
     .footer{
         padding: 2rem 3%;
     }
@@ -572,8 +578,9 @@ span{
     }
 
     .card {
-        width: 200px; /* largura reduzida para telas menores */
-        height: 150px; /* Ajusta a altura para melhorar o layout */
+        flex: 1 1 220px; /* permite que os cards se ajustem ao espaço disponível */
+        max-width: 320px;
+        min-height: 140px; /* evita cards muito altos enquanto permite conteúdo */
     }
 
     .card img {
@@ -592,7 +599,7 @@ span{
     .servicos-caixa {
         flex: 1 1 100%; /* Ajusta a largura para ocupar 100% */
         padding: 2rem 1.5rem;
-        height: auto; /* Permite altura flexível */
+        min-height: 22rem; /* reduzir min-height em telas médias para caber melhor */
         border-radius: 1.5rem;
     }
 
@@ -692,8 +699,9 @@ span{
     }
 
     .card {
-        width: 80px; /* largura reduzida para celulares */
-        height: 50px; /* Ajusta a altura para celulares */
+        flex: 1 1 45%;
+        max-width: 260px;
+        min-height: 140px;
     }
 
     .card img {
@@ -706,8 +714,8 @@ span{
     }
 
     .card-content p {
-        line-height: 1.6;
-        font-size: 1.8rem; /* Ajusta o tamanho do texto */
+        line-height: 1.4;
+        font-size: 1.3rem; /* Ajusta o tamanho do texto */
     }
 
     .servicos-caixa video{
@@ -731,6 +739,11 @@ span{
         border-radius: 2rem; /* Bordas mais sutis */
         margin-top: 1rem; /* Espaço extra entre elementos */
         width: 80%; /* Ocupa 90% da largura do container */
+    }
+
+    .servicos-caixa {
+        min-height: 20rem; /* altura mais compacta em telas pequenas */
+        align-items: stretch;
     }
 
     .contact form .input-box input{
@@ -766,8 +779,9 @@ span{
     }
 
     .card {
-        width: 100px; /* largura reduzida para telas muito pequenas */
-        height: 100px; /* Ajusta a altura para ficar mais compacta */
+        flex: 1 1 45%;
+        max-width: 240px;
+        min-height: 120px;
     }
 
     .card-content h3 {
@@ -775,8 +789,8 @@ span{
     }
 
     .card-content p {
-        line-height: 1.0;
-        font-size: 1.9rem; /* Tamanho do título ajustado para celulares */
+        line-height: 1.1;
+        font-size: 1.2rem; /* Ajusta o texto para telas muito pequenas */
     }
 
     .heading {
@@ -788,6 +802,7 @@ span{
         padding: 1.5rem;
         border-radius: 1rem;
         border-width: 0.05rem;
+        min-height: 18rem; /* ultima redução para telas muito pequenas */
     }
 
     .servicos-caixa h3 {
